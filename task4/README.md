@@ -50,6 +50,8 @@ The project provides two major capabilities:
     └── Design_Note.pdf
 
 
+---
+
 # 🎯 Task 1 — AI Support Ticket Triage
 
 Task 1 automatically analyzes and classifies customer support tickets using **Gemini + RAG + ChromaDB**.
