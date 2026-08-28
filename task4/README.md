@@ -50,6 +50,16 @@ The project provides two major capabilities:
     └── Design_Note.pdf
 
 
+# Zycus AI Support Triage
+
+An AI-powered customer support automation system built using **Python, FastAPI, Google Gemini, ChromaDB, RAG, and Streamlit**.
+
+The project provides two major capabilities:
+
+- **Task 1:** AI-powered support ticket triage using Gemini + RAG + ChromaDB.
+- **Task 2:** Account health and customer-risk analysis using account and ticket data.
+- **Task 3:** Automated evaluation of Task 1 and Task 2.
+
 ---
 
 # 🎯 Task 1 — AI Support Ticket Triage
@@ -90,7 +100,6 @@ Knowledge Base
       ▼
 Structured Triage
 ```
-
 ## 📥 Input
 
 ```json
