@@ -6,6 +6,8 @@ The project provides two major capabilities:
 
 - **Task 1:** AI-powered support ticket triage using RAG.
 - **Task 2:** Account health and customer-risk analysis.
+- **Task 3:** Automated evaluation framework.
+- **Task 4:** System design documentation.
 
 ---
 
@@ -48,17 +50,9 @@ The project provides two major capabilities:
 │
 └── task4/
     └── Design_Note.pdf
+```
 
-
-# Zycus AI Support Triage
-
-An AI-powered customer support automation system built using **Python, FastAPI, Google Gemini, ChromaDB, RAG, and Streamlit**.
-
-The project provides two major capabilities:
-
-- **Task 1:** AI-powered support ticket triage using Gemini + RAG + ChromaDB.
-- **Task 2:** Account health and customer-risk analysis using account and ticket data.
-- **Task 3:** Automated evaluation of Task 1 and Task 2.
+> **Security:** `.env`, `__pycache__/`, and generated database files should not be committed to GitHub.
 
 ---
 
@@ -100,6 +94,7 @@ Knowledge Base
       ▼
 Structured Triage
 ```
+
 ## 📥 Input
 
 ```json
@@ -301,7 +296,7 @@ task3/evaluation/
 
 ## Task 1
 
-Navigate to the Task 1 directory:
+Navigate to Task 1:
 
 ```bash
 cd task1
@@ -319,7 +314,7 @@ Start the FastAPI server:
 python -m uvicorn main:app --reload
 ```
 
-Open another terminal and run Streamlit:
+In another terminal:
 
 ```bash
 cd task1
@@ -330,7 +325,7 @@ streamlit run streamlit_app.py
 
 ## Task 2
 
-Navigate to the Task 2 directory:
+Navigate to Task 2:
 
 ```bash
 cd task2
@@ -348,7 +343,7 @@ Start the FastAPI server:
 python -m uvicorn main:app --reload
 ```
 
-Open another terminal and run Streamlit:
+In another terminal:
 
 ```bash
 cd task2
@@ -378,15 +373,35 @@ Replace `your_gemini_api_key` with your actual Gemini API key.
 Recommended `.gitignore`:
 
 ```gitignore
+# Environment
 .env
 .env.*
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# ChromaDB
 Chroma_db/
+
+# Databases
 *.db
 *.sqlite
-.venv/
-venv/
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
 ```
 
 The following should not be committed:
@@ -415,7 +430,7 @@ Navigate to the evaluation directory:
 cd task3/evaluation
 ```
 
-Run the evaluation:
+Run:
 
 ```bash
 python evaluate.py
@@ -444,7 +459,7 @@ The system provides:
 - Knowledge-base references
 - Risk explanations
 
-This makes the AI-generated results easier to understand and validate.
+This makes AI-generated results easier to understand and validate.
 
 ## Security
 
@@ -471,21 +486,6 @@ Potential improvements include:
 - API rate limiting
 - Persistent vector storage
 - Background workers
-
----
-
-# 🔮 Future Improvements
-
-- Production-grade vector database
-- Redis caching
-- Authentication and RBAC
-- PII detection and redaction
-- Monitoring and observability
-- Human-in-the-loop escalation
-- CRM integration
-- Support-platform integration
-- Docker deployment
-- Horizontal scaling
 
 ---
 
@@ -588,23 +588,6 @@ TAM Talking Points
 
 ---
 
-# 💡 Structured JSON Output
-
-The system produces structured JSON responses so that results can easily be consumed by other applications.
-
-Potential integrations include:
-
-- CRM systems
-- Customer support platforms
-- Customer-success dashboards
-- Internal automation
-- Reporting systems
-- Alerting systems
-
-Structured outputs also make automated evaluation easier.
-
----
-
 # 📈 Overall Project Flow
 
 ```text
@@ -624,7 +607,7 @@ Structured outputs also make automated evaluation easier.
                  ▼                           ▼
         ┌─────────────────┐         ┌─────────────────┐
         │    ChromaDB     │         │ accounts.json   │
-        │       RAG       │         │ tickets.json   │
+        │       RAG       │         │ tickets.json    │
         └────────┬────────┘         └────────┬────────┘
                  │                           │
                  └─────────────┬─────────────┘
@@ -690,6 +673,21 @@ Task 2            : 6/6
 
 ---
 
+# 🔮 Future Improvements
+
+- Production-grade vector database
+- Redis caching
+- Authentication and RBAC
+- PII detection and redaction
+- Monitoring and observability
+- Human-in-the-loop escalation
+- CRM integration
+- Support-platform integration
+- Docker deployment
+- Horizontal scaling
+
+---
+
 # 📌 Security Checklist
 
 Before pushing the repository to GitHub:
@@ -706,45 +704,9 @@ Before pushing the repository to GitHub:
 
 ---
 
-# 📝 Example `.gitignore`
-
-```gitignore
-# Environment
-.env
-.env.*
-
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-
-# Virtual environments
-venv/
-.venv/
-env/
-
-# ChromaDB
-Chroma_db/
-
-# Databases
-*.db
-*.sqlite
-*.sqlite3
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-```
-
----
-
 # 🏆 Project Summary
 
-**Zycus AI Support Triage** demonstrates an end-to-end AI automation workflow combining:
+**Zycus AI Support Triage and TAM Support** demonstrates an end-to-end AI automation workflow combining:
 
 **LLM + RAG + Semantic Search + Support Ticket Triage + Account Risk Analysis + FastAPI + Streamlit**
 
