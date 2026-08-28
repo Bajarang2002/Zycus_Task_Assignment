@@ -1,0 +1,157 @@
+[
+  {
+    "test_id": "task2_test_01",
+    "name": "At-risk account with P1 activity and competing vendor evaluation",
+    "adversarial": false,
+    "input": {
+      "account_id": "ACC-3336"
+    },
+    "expected_output": {
+      "account_id": "ACC-3336",
+      "company": "Omni Consumer Products",
+      "executive_summary": "Omni Consumer Products is currently classified as 'At Risk' with an inactive usage trend and 1,693 out of 1,845 seats active. The account is facing significant pressure, including three consecutive P1 tickets in the last 30 days and reports that the decision-maker is considering a competing vendor evaluation. While there are 7 open tickets, the most recent performance-related ticket regarding DataBridge Pro has been closed. With a renewal date of August 19, 2026, immediate intervention is required to address the customer's concerns and stabilize the relationship.",
+      "open_risks_and_flagged_issues": [
+        {
+          "ticket_id": "TKT-10293",
+          "signal_type": "escalation_risk",
+          "severity": "medium",
+          "evidence_quote": "Page loads are taking 119+ seconds and API operations are timing out.",
+          "reason": "The ticket reports timeout behavior."
+        }
+      ],
+      "tam_talking_points": [
+        "Address the decision-maker's consideration of a competing vendor evaluation to understand specific pain points.",
+        "Investigate the root cause of the three consecutive P1 tickets reported in the last 30 days to prevent further escalations.",
+        "Review the current seat utilization and inactive usage trend to identify barriers to product adoption.",
+        "Develop a remediation plan for the 7 open tickets to restore confidence in the platform's stability.",
+        "Schedule a follow-up meeting with VP of Technology, Quinn Wilson, to discuss the renewal strategy and demonstrate ongoing product value."
+      ],
+      "data_window_start": "2026-05-20T18:35:32.197513",
+      "data_window_end": "2026-05-20T18:35:32.197513",
+      "ticket_count_90d": 1
+    }
+  },
+  {
+    "test_id": "task2_test_02",
+    "name": "New Enterprise account with low seat utilization",
+    "adversarial": false,
+    "input": {
+      "account_id": "ACC-7893"
+    },
+    "expected_output": {
+      "account_id": "ACC-7893",
+      "company": "Solaris Data",
+      "executive_summary": "Solaris Data is a new Enterprise account with an increasing usage trend, though seat utilization currently stands at 57.6% with 757 of 1,314 seats active. The account has an NPS score of 10 and has not logged in for 24 days. There are currently 5 open support tickets, and no P1 tickets have been reported in the last 30 days. The renewal date is set for December 25, 2026.",
+      "open_risks_and_flagged_issues": [],
+      "tam_talking_points": [
+        "Address the low NPS score of 10 to identify specific customer pain points and improve satisfaction.",
+        "Investigate the 24-day period of inactivity to understand potential barriers to platform engagement.",
+        "Review the 5 open support tickets to ensure timely resolution and prevent potential escalations.",
+        "Develop a strategy to increase seat utilization from the current 57.6% to maximize product value.",
+        "Schedule a follow-up touchpoint with IT Manager Quinn Wilson to discuss the recent QBR feedback and current account health."
+      ],
+      "data_window_start": "",
+      "data_window_end": "",
+      "ticket_count_90d": 0
+    }
+  },
+  {
+    "test_id": "task2_test_03",
+    "name": "At-risk account with critical support issue",
+    "adversarial": false,
+    "input": {
+      "account_id": "ACC-1785"
+    },
+    "expected_output": {
+      "account_id": "ACC-1785",
+      "company": "Cyberdyne Systems",
+      "executive_summary": "Cyberdyne Systems is currently classified as 'At Risk' with a stable usage trend and 563 out of 610 seats active. The account has experienced a P1 ticket in the last 30 days and is currently facing negative sentiment in support interactions. Additionally, the procurement team has requested a pricing review, and the primary contact has not logged in for 47 days. Despite these challenges, the account remains active with a renewal date set for May 2027.",
+      "open_risks_and_flagged_issues": [
+        {
+          "ticket_id": "TKT-10112",
+          "signal_type": "escalation_risk",
+          "severity": "medium",
+          "evidence_quote": "Hi team,\n\nWe're experiencing a critical issue with CloudSync.",
+          "reason": "The ticket describes the issue as critical."
+        }
+      ],
+      "tam_talking_points": [
+        "Address the procurement team's request for a pricing review to mitigate churn risk.",
+        "Investigate the negative sentiment reported in recent support tickets to improve the customer experience.",
+        "Re-engage the primary contact, Morgan Davis, given the 47-day inactivity period.",
+        "Review the recent P1 ticket activity to ensure all underlying product concerns have been fully addressed.",
+        "Discuss seat utilization and value realization to ensure the Starter plan continues to meet their needs."
+      ],
+      "data_window_start": "2026-04-05T16:53:32.189739",
+      "data_window_end": "2026-04-05T16:53:32.189739",
+      "ticket_count_90d": 1
+    }
+  },
+  {
+    "test_id": "task2_test_04",
+    "name": "Low adoption and competitive vendor evaluation",
+    "adversarial": false,
+    "input": {
+      "account_id": "ACC-4507"
+    },
+    "expected_output": {
+      "account_id": "ACC-4507",
+      "company": "Nakatomi Trading",
+      "executive_summary": "Nakatomi Trading is currently classified as At Risk with a low seat utilization rate of 59% and no user logins recorded in the last 62 days. The account has one P1 ticket from the last 30 days and two open support tickets, contributing to overall instability. Escalation notes indicate that the customer has skipped their last two QBRs and is expressing concerns regarding integration reliability. Furthermore, the decision-maker is currently considering an evaluation of competing vendors ahead of the April 2027 renewal.",
+      "open_risks_and_flagged_issues": [],
+      "tam_talking_points": [
+        "Address the lack of platform activity by scheduling a discovery call to understand why users have not logged in for over two months.",
+        "Investigate the specific integration reliability concerns raised by the IT team to prevent further escalation.",
+        "Re-engage the primary contact to reschedule the missed QBRs and demonstrate the value of the current product suite.",
+        "Develop a mitigation plan to address the decision-maker's interest in competing vendors before the renewal cycle.",
+        "Review the status of the two open support tickets and the recent P1 incident to ensure all technical blockers are resolved."
+      ],
+      "data_window_start": "",
+      "data_window_end": "",
+      "ticket_count_90d": 0
+    }
+  },
+  {
+    "test_id": "task2_test_05",
+    "name": "Declining usage with P1 incidents and competitive evaluation",
+    "adversarial": false,
+    "input": {
+      "account_id": "ACC-3930"
+    },
+    "expected_output": {
+      "account_id": "ACC-3930",
+      "company": "Praxis Corp",
+      "executive_summary": "Praxis Corp is currently classified as At Risk with a declining usage trend and a low NPS score of 4. Seat utilization is currently at 62%, with 806 active seats out of 1290 licensed. The account has 9 open support tickets and has experienced 2 P1 incidents in the last 30 days. Furthermore, the customer is currently evaluating competing vendors and has requested a pricing review from procurement ahead of their November 2026 renewal.",
+      "open_risks_and_flagged_issues": [],
+      "tam_talking_points": [
+        "Address the declining usage trend and the 46-day inactivity period for the primary contact.",
+        "Develop a strategy to improve seat utilization, as only 62% of licensed seats are currently active.",
+        "Prioritize the resolution of the 9 open support tickets and the 2 recent P1 incidents to stabilize the account.",
+        "Engage with Alex Morgan to discuss the competitive evaluation and address the procurement team's request for a pricing review.",
+        "Schedule a follow-up meeting to review product value and address the low NPS score of 4."
+      ],
+      "data_window_start": "",
+      "data_window_end": "",
+      "ticket_count_90d": 0
+    }
+  },
+  {
+    "test_id": "task2_test_06",
+    "name": "Adversarial - unknown account",
+    "adversarial": true,
+    "input": {
+      "account_id": "ACC-2765"
+    },
+    "expected_output": {
+      "detail": "Account 'ACC-2765' was not found in accounts.json."
+    },
+    "acceptance_criteria": [
+      "The API must identify ACC-2765 as an unknown account.",
+      "The API must return an HTTP 404 response.",
+      "The response must contain a detail field.",
+      "The detail message should indicate that ACC-2765 was not found in accounts.json.",
+      "The application must not generate an account health brief for the unknown account.",
+      "The application must not invent account information, ticket information, risks, or TAM talking points for ACC-2765."
+    ]
+  }
+]

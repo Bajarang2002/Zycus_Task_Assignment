@@ -1,0 +1,135 @@
+[
+{
+"test_id": "T1-001",
+"name": "Authentication login failure",
+"adversarial": false,
+"input": {
+"subject": "Unable to login",
+"body": "Several users are receiving SESSION_INVALID when trying to log in to the application.",
+"product": "CloudSync",
+"product_area": "Authentication",
+"plan_tier": "Business"
+},
+"expected_output": {
+"issue_category": "Login/Access",
+"urgency": "P2",
+"required_keywords": [
+"Authentication",
+"SESSION_INVALID",
+"Identity"
+]
+}
+},
+{
+"test_id": "T1-002",
+"name": "Billing discrepancy",
+"adversarial": false,
+"input": {
+"subject": "Invoice amount looks incorrect",
+"body": "The latest invoice contains charges that do not match our expected subscription amount. Please review the billing details and let us know why these additional charges appeared.",
+"product": "CloudSync",
+"product_area": "Billing",
+"plan_tier": "Starter"
+},
+"expected_output": {
+"issue_category": "Billing Inquiry",
+"urgency": "P3",
+"required_keywords": [
+"Billing",
+"invoice",
+"charges"
+]
+}
+},
+{
+"test_id": "T1-003",
+"name": "WorkflowEngine API errors",
+"adversarial": false,
+"input": {
+"subject": "API requests failing",
+"body": "API requests have started returning 500 errors since this morning. Around 50 users are unable to complete their automated workflows.",
+"product": "WorkflowEngine",
+"product_area": "API",
+"plan_tier": "Business"
+},
+"expected_output": {
+"issue_category": "Technical Issue",
+"urgency": "P2",
+"required_keywords": [
+"API",
+"500",
+"WorkflowEngine"
+]
+}
+},
+{
+"test_id": "T1-004",
+"name": "Critical service disruption",
+"adversarial": false,
+"input": {
+"subject": "Service is completely unusable",
+"body": "We have experienced repeated failures for the last several days. Multiple users cannot access critical workflows and our production operations are blocked.",
+"product": "WorkflowEngine",
+"product_area": "Core Platform",
+"plan_tier": "Enterprise"
+},
+"expected_output": {
+"issue_category": "Service Outage",
+"urgency": "P1",
+"required_keywords": [
+"WorkflowEngine",
+"outage",
+"Site Reliability"
+]
+}
+},
+{
+"test_id": "T1-005",
+"name": "Performance timeout issue",
+"adversarial": false,
+"input": {
+"subject": "Application is extremely slow",
+"body": "Page loads are taking more than two minutes and API operations are timing out. Multiple users are experiencing delays while using the application.",
+"product": "CloudSync",
+"product_area": "Performance",
+"plan_tier": "Business"
+},
+"expected_output": {
+"issue_category": "Technical Issue",
+"urgency": "P2",
+"required_keywords": [
+"timeout",
+"performance",
+"CloudSync"
+]
+}
+},
+{
+"test_id": "T1-006",
+"name": "Adversarial - vendor concern without outage",
+"adversarial": true,
+"input": {
+"subject": "Everything seems fine, but we may switch vendors",
+"body": "There are no specific errors at the moment and the application appears to be working normally. However, our team is not fully satisfied with the platform and we are discussing whether to continue with the current solution or evaluate another vendor. No immediate technical issue has been identified.",
+"product": "WorkflowEngine",
+"product_area": "Core Platform",
+"plan_tier": "Enterprise"
+},
+"expected_output": {
+"issue_category": "Technical Issue",
+"urgency": "P3",
+"required_keywords": [
+"vendor",
+"WorkflowEngine",
+"Engineering"
+]
+},
+"acceptance_criteria": [
+"The model must not classify this ticket as a P1 service outage.",
+"The model must recognize that the application is currently working normally.",
+"The model must not invent a specific technical failure.",
+"The response should acknowledge the customer's concern about evaluating another vendor.",
+"The priority must remain lower than P1."
+]
+}
+]

@@ -1,0 +1,431 @@
+{
+  "summary": {
+    "total_tests": 12,
+    "passed": 11,
+    "failed": 1,
+    "pass_rate": 0.92,
+    "overall_quality_score": 0.93
+  },
+  "task1": {
+    "total": 6,
+    "passed": 5,
+    "failed": 1,
+    "results": [
+      {
+        "test_id": "T1-001",
+        "name": "Authentication login failure",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 5,
+        "checks_total": 5,
+        "acceptance_results": [],
+        "actual_output": {
+          "product_area": "Authentication",
+          "issue_category": "Login/Access",
+          "urgency": "P2",
+          "reasoning": "The customer reported a 'SESSION_INVALID' error during login. According to the knowledge base (troubleshooting/authentication-sso.md), this error code indicates that the concurrent session limit has been reached. As this is a known error code with a documented cause and resolution, it is classified as a known issue.",
+          "known_issue": true,
+          "knowledge_base_references": [
+            {
+              "source": "troubleshooting/authentication-sso.md",
+              "relevance": 0.6003
+            },
+            {
+              "source": "troubleshooting/authentication-sso.md",
+              "relevance": 0.5971
+            },
+            {
+              "source": "troubleshooting/authentication-sso.md",
+              "relevance": 0.5917
+            },
+            {
+              "source": "products/cloudsync.md",
+              "relevance": 0.5747
+            },
+            {
+              "source": "products/cloudsync.md",
+              "relevance": 0.5709
+            }
+          ],
+          "recommended_team": "Identity",
+          "first_response": "Hello, thank you for reaching out. The 'SESSION_INVALID' error you are encountering typically indicates that the concurrent session limit for your user accounts has been reached. You can resolve this by signing out of other active sessions or by adjusting your session policy settings under Settings → Security → Session Policy → Max Concurrent Sessions. Please let us know if you continue to experience issues after checking these settings."
+        }
+      },
+      {
+        "test_id": "T1-002",
+        "name": "Billing discrepancy",
+        "status": "PASS",
+        "quality_score": 0.8,
+        "checks_passed": 4,
+        "checks_total": 5,
+        "acceptance_results": [],
+        "actual_output": {
+          "product_area": "Billing",
+          "issue_category": "Billing/Subscription",
+          "urgency": "P3",
+          "reasoning": "The customer is reporting a discrepancy in their invoice amount. The retrieved knowledge base provides specific troubleshooting steps for seat-based billing discrepancies, including how to export active user lists and check for service accounts, which directly addresses the customer's concern.",
+          "known_issue": true,
+          "knowledge_base_references": [
+            {
+              "source": "billing/billing-and-plans.md",
+              "relevance": 0.5901
+            },
+            {
+              "source": "products/cloudsync.md",
+              "relevance": 0.5659
+            },
+            {
+              "source": "products/cloudsync.md",
+              "relevance": 0.5597
+            },
+            {
+              "source": "billing/billing-and-plans.md",
+              "relevance": 0.5547
+            },
+            {
+              "source": "products/cloudsync.md",
+              "relevance": 0.5382
+            }
+          ],
+          "recommended_team": "Billing",
+          "first_response": "Thank you for reaching out regarding your recent invoice. I understand you have concerns about the charges on your latest statement. To help us investigate this, please follow these steps to verify your seat usage: 1. Navigate to Settings → Users and export your active user list (filter by 'Active in last 30 days'). 2. Compare this list against the seat count on your invoice. 3. Please also check for any service accounts or API users, as these are counted as seats. If you still see a discrepancy after performing these checks, please reply with the exported user list attached, and we will be happy to open a formal billing dispute for you."
+        }
+      },
+      {
+        "test_id": "T1-003",
+        "name": "WorkflowEngine API errors",
+        "status": "FAIL",
+        "quality_score": 0.6,
+        "checks_passed": 3,
+        "checks_total": 5,
+        "acceptance_results": [],
+        "actual_output": {
+          "product_area": "API",
+          "issue_category": "Service Outage",
+          "urgency": "P1",
+          "reasoning": "The customer reports widespread 500 errors affecting 50 users and blocking automated workflows. This indicates a critical service disruption impacting production operations, which aligns with the P1 criteria for a service outage.",
+          "known_issue": true,
+          "knowledge_base_references": [
+            {
+              "source": "products/workflowengine.md",
+              "relevance": 0.584
+            },
+            {
+              "source": "troubleshooting/performance-and-integrations.md",
+              "relevance": 0.5597
+            },
+            {
+              "source": "products/workflowengine.md",
+              "relevance": 0.5554
+            },
+            {
+              "source": "troubleshooting/authentication-sso.md",
+              "relevance": 0.5452
+            },
+            {
+              "source": "troubleshooting/performance-and-integrations.md",
+              "relevance": 0.5435
+            }
+          ],
+          "recommended_team": "Site Reliability",
+          "first_response": "Thank you for reaching out. I am sorry to hear that you are experiencing 500 errors with your API requests, and I understand this is impacting your automated workflows. I have escalated this to our Site Reliability Engineering team as a priority, and we are currently investigating the root cause. I will provide you with an update as soon as we have more information."
+        }
+      },
+      {
+        "test_id": "T1-004",
+        "name": "Critical service disruption",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 5,
+        "checks_total": 5,
+        "acceptance_results": [],
+        "actual_output": {
+          "product_area": "Core Platform",
+          "issue_category": "Service Outage",
+          "urgency": "P1",
+          "reasoning": "The customer reports that multiple users cannot access critical production workflows and operations are blocked. Per the canonical classification rules, this constitutes a service outage requiring immediate attention from the Site Reliability team.",
+          "known_issue": true,
+          "knowledge_base_references": [
+            {
+              "source": "products/workflowengine.md",
+              "relevance": 0.5685
+            },
+            {
+              "source": "products/workflowengine.md",
+              "relevance": 0.5639
+            },
+            {
+              "source": "products/workflowengine.md",
+              "relevance": 0.5568
+            },
+            {
+              "source": "onboarding/onboarding-guide.md",
+              "relevance": 0.5565
+            },
+            {
+              "source": "troubleshooting/performance-and-integrations.md",
+              "relevance": 0.5409
+            }
+          ],
+          "recommended_team": "Site Reliability",
+          "first_response": "I am very sorry to hear that your team is experiencing these critical workflow failures. Given the impact on your production operations, I have escalated this ticket to our Site Reliability team as a priority. We are investigating the platform status immediately. Please check our status page at status.yourplatform.com for any ongoing incidents, and I will provide you with an update as soon as we have more information."
+        }
+      },
+      {
+        "test_id": "T1-005",
+        "name": "Performance timeout issue",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 5,
+        "checks_total": 5,
+        "acceptance_results": [],
+        "actual_output": {
+          "product_area": "Performance",
+          "issue_category": "Technical Issue",
+          "urgency": "P2",
+          "reasoning": "The customer is reporting significant performance degradation, including two-minute page loads and API timeouts affecting multiple users. This matches the 'Troubleshooting: Performance Issues' knowledge base document, which provides diagnostic steps for slow UI and API performance.",
+          "known_issue": true,
+          "knowledge_base_references": [
+            {
+              "source": "troubleshooting/performance-and-integrations.md",
+              "relevance": 0.6176
+            },
+            {
+              "source": "products/cloudsync.md",
+              "relevance": 0.6003
+            },
+            {
+              "source": "troubleshooting/performance-and-integrations.md",
+              "relevance": 0.5871
+            },
+            {
+              "source": "products/cloudsync.md",
+              "relevance": 0.5799
+            },
+            {
+              "source": "troubleshooting/performance-and-integrations.md",
+              "relevance": 0.5645
+            }
+          ],
+          "recommended_team": "Engineering",
+          "first_response": "I am sorry to hear that you are experiencing significant performance delays and API timeouts with CloudSync. I understand how this impacts your team's workflow. To help us investigate the root cause, could you please check our status page at status.yourplatform.com to see if there is an active incident? Additionally, if you are seeing specific API errors, please provide the request IDs or check the 'X-Processing-Time' header in your API responses. Our engineering team is currently reviewing your report to identify if this is a platform-wide issue or specific to your environment."
+        }
+      },
+      {
+        "test_id": "T1-006",
+        "name": "Adversarial - vendor concern without outage",
+        "status": "PASS",
+        "quality_score": 0.8,
+        "checks_passed": 8,
+        "checks_total": 10,
+        "acceptance_results": [
+          {
+            "criterion": "The model must not classify this ticket as a P1 service outage.",
+            "passed": true
+          },
+          {
+            "criterion": "The model must recognize that the application is currently working normally.",
+            "passed": false
+          },
+          {
+            "criterion": "The model must not invent a specific technical failure.",
+            "passed": false
+          },
+          {
+            "criterion": "The response should acknowledge the customer's concern about evaluating another vendor.",
+            "passed": true
+          },
+          {
+            "criterion": "The priority must remain lower than P1.",
+            "passed": true
+          }
+        ],
+        "actual_output": {
+          "product_area": "Core Platform",
+          "issue_category": "Technical Issue",
+          "urgency": "P3",
+          "reasoning": "The customer reports that the application is functioning normally and there are no technical errors. They are expressing dissatisfaction and considering switching vendors. Per the instructions, this is classified as a P3 Technical Issue to be handled by Engineering to address the customer's concerns.",
+          "known_issue": true,
+          "knowledge_base_references": [
+            {
+              "source": "products/workflowengine.md",
+              "relevance": 0.5622
+            },
+            {
+              "source": "products/workflowengine.md",
+              "relevance": 0.5421
+            },
+            {
+              "source": "billing/billing-and-plans.md",
+              "relevance": 0.5381
+            },
+            {
+              "source": "troubleshooting/performance-and-integrations.md",
+              "relevance": 0.5355
+            },
+            {
+              "source": "billing/billing-and-plans.md",
+              "relevance": 0.5257
+            }
+          ],
+          "recommended_team": "Engineering",
+          "first_response": "Thank you for reaching out and sharing your feedback with us. I understand that while the platform is currently operating as expected, your team is evaluating your experience and considering other options. We take your satisfaction very seriously. Could you please share more details regarding the specific areas where the platform is not meeting your team's needs? This information will be invaluable for our engineering and product teams to address your concerns and improve your experience."
+        }
+      }
+    ]
+  },
+  "task2": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "results": [
+      {
+        "test_id": "task2_test_01",
+        "name": "At-risk account with P1 activity and competing vendor evaluation",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 6,
+        "checks_total": 6,
+        "actual_output": {
+          "account_id": "ACC-3336",
+          "company": "Omni Consumer Products",
+          "executive_summary": "Omni Consumer Products is currently classified as 'At Risk' with an inactive usage trend and 1,693 out of 1,845 seats active. The account is facing significant pressure, including three consecutive P1 tickets in the last 30 days and reports that the decision-maker is considering a competing vendor evaluation. While there are 7 open tickets, the most recent performance-related ticket regarding DataBridge Pro has been closed. With a renewal date of August 19, 2026, immediate intervention is required to address the customer's concerns and stabilize the relationship.",
+          "open_risks_and_flagged_issues": [
+            {
+              "ticket_id": "TKT-10293",
+              "signal_type": "escalation_risk",
+              "severity": "medium",
+              "evidence_quote": "Page loads are taking 119+ seconds and API operations are timing out.",
+              "reason": "The ticket reports timeout behavior."
+            }
+          ],
+          "tam_talking_points": [
+            "Address the decision-maker's consideration of a competing vendor evaluation to understand specific pain points.",
+            "Investigate the root cause of the three consecutive P1 tickets reported in the last 30 days to prevent further escalations.",
+            "Review the current seat utilization and inactive usage trend to identify barriers to product adoption.",
+            "Develop a remediation plan for the 7 open tickets to restore confidence in the platform's stability.",
+            "Schedule a follow-up meeting with VP of Technology, Quinn Wilson, to discuss the renewal strategy and demonstrate ongoing product value."
+          ],
+          "data_window_start": "2026-05-20T18:35:32.197513",
+          "data_window_end": "2026-05-20T18:35:32.197513",
+          "ticket_count_90d": 1
+        }
+      },
+      {
+        "test_id": "task2_test_02",
+        "name": "New Enterprise account with low seat utilization",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 6,
+        "checks_total": 6,
+        "actual_output": {
+          "account_id": "ACC-7893",
+          "company": "Solaris Data",
+          "executive_summary": "Solaris Data is a new Enterprise account with an increasing usage trend, though seat utilization currently stands at 57.6% with 757 of 1,314 seats active. The account has an NPS score of 10 and has not logged in for 24 days. There are currently 5 open support tickets, and no P1 tickets have been reported in the last 30 days. The renewal date is set for December 25, 2026.",
+          "open_risks_and_flagged_issues": [],
+          "tam_talking_points": [
+            "Address the low NPS score of 10 to identify specific customer pain points and improve satisfaction.",
+            "Investigate the 24-day period of inactivity to understand potential barriers to platform engagement.",
+            "Review the 5 open support tickets to ensure timely resolution and prevent potential escalations.",
+            "Develop a strategy to increase seat utilization from the current 57.6% to maximize product value.",
+            "Schedule a follow-up touchpoint with IT Manager Quinn Wilson to discuss the recent QBR feedback and current account health."
+          ],
+          "data_window_start": "",
+          "data_window_end": "",
+          "ticket_count_90d": 0
+        }
+      },
+      {
+        "test_id": "task2_test_03",
+        "name": "At-risk account with critical support issue",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 6,
+        "checks_total": 6,
+        "actual_output": {
+          "account_id": "ACC-1785",
+          "company": "Cyberdyne Systems",
+          "executive_summary": "Cyberdyne Systems is currently classified as 'At Risk' with a stable usage trend and 563 out of 610 seats active. The account has experienced a P1 ticket in the last 30 days and is currently facing negative sentiment in support interactions. Additionally, the procurement team has requested a pricing review, and the primary contact has not logged in for 47 days. Despite these challenges, the account remains active with a renewal date set for May 2027.",
+          "open_risks_and_flagged_issues": [
+            {
+              "ticket_id": "TKT-10112",
+              "signal_type": "escalation_risk",
+              "severity": "medium",
+              "evidence_quote": "Hi team,\n\nWe're experiencing a critical issue with CloudSync.",
+              "reason": "The ticket describes the issue as critical."
+            }
+          ],
+          "tam_talking_points": [
+            "Address the procurement team's request for a pricing review to mitigate churn risk.",
+            "Investigate the negative sentiment reported in recent support tickets to improve the customer experience.",
+            "Re-engage the primary contact, Morgan Davis, given the 47-day inactivity period.",
+            "Review the recent P1 ticket activity to ensure all underlying product concerns have been fully addressed.",
+            "Discuss seat utilization and value realization to ensure the Starter plan continues to meet their needs."
+          ],
+          "data_window_start": "2026-04-05T16:53:32.189739",
+          "data_window_end": "2026-04-05T16:53:32.189739",
+          "ticket_count_90d": 1
+        }
+      },
+      {
+        "test_id": "task2_test_04",
+        "name": "Low adoption and competitive vendor evaluation",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 6,
+        "checks_total": 6,
+        "actual_output": {
+          "account_id": "ACC-4507",
+          "company": "Nakatomi Trading",
+          "executive_summary": "Nakatomi Trading is currently classified as At Risk with a low seat utilization rate of 59% and no user logins recorded in the last 62 days. The account has one P1 ticket from the last 30 days and two open support tickets, contributing to overall instability. Escalation notes indicate that the customer has skipped their last two QBRs and is expressing concerns regarding integration reliability. Furthermore, the decision-maker is currently considering an evaluation of competing vendors ahead of the April 2027 renewal.",
+          "open_risks_and_flagged_issues": [],
+          "tam_talking_points": [
+            "Address the lack of platform activity by scheduling a discovery call to understand why users have not logged in for over two months.",
+            "Investigate the specific integration reliability concerns raised by the IT team to prevent further escalation.",
+            "Re-engage the primary contact to reschedule the missed QBRs and demonstrate the value of the current product suite.",
+            "Develop a mitigation plan to address the decision-maker's interest in competing vendors before the renewal cycle.",
+            "Review the status of the two open support tickets and the recent P1 incident to ensure all technical blockers are resolved."
+          ],
+          "data_window_start": "",
+          "data_window_end": "",
+          "ticket_count_90d": 0
+        }
+      },
+      {
+        "test_id": "task2_test_05",
+        "name": "Declining usage with P1 incidents and competitive evaluation",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 6,
+        "checks_total": 6,
+        "actual_output": {
+          "account_id": "ACC-3930",
+          "company": "Praxis Corp",
+          "executive_summary": "Praxis Corp is currently classified as At Risk with a declining usage trend and a low NPS score of 4. Seat utilization is currently at 62%, with 806 active seats out of 1290 licensed. The account has 9 open support tickets and has experienced 2 P1 incidents in the last 30 days. Furthermore, the customer is currently evaluating competing vendors and has requested a pricing review from procurement ahead of their November 2026 renewal.",
+          "open_risks_and_flagged_issues": [],
+          "tam_talking_points": [
+            "Address the declining usage trend and the 46-day inactivity period for the primary contact.",
+            "Develop a strategy to improve seat utilization, as only 62% of licensed seats are currently active.",
+            "Prioritize the resolution of the 9 open support tickets and the 2 recent P1 incidents to stabilize the account.",
+            "Engage with Alex Morgan to discuss the competitive evaluation and address the procurement team's request for a pricing review.",
+            "Schedule a follow-up meeting to review product value and address the low NPS score of 4."
+          ],
+          "data_window_start": "",
+          "data_window_end": "",
+          "ticket_count_90d": 0
+        }
+      },
+      {
+        "test_id": "task2_test_06",
+        "name": "Adversarial - unknown account",
+        "status": "PASS",
+        "quality_score": 1.0,
+        "checks_passed": 3,
+        "checks_total": 3,
+        "actual_output": {
+          "detail": "Account 'ACC-2765' was not found in accounts.json."
+        }
+      }
+    ]
+  }
+}
